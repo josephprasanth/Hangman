@@ -8,7 +8,28 @@
     <script src="app.js"></script>
 </head>
 <body ng-app="HangmanApp" ng-controller="GameController">
-  
+    <div>
+        <div>
+            Guesses Left: {{guesses}}
+        </div>
+        <div>
+                Your Incorrect Guesses: {{incorrectLettersChoosen}}
+        </div>
+        <div>
+                Your Correct Guesses: {{correctLettersChoosen}}
+        </div>
+
+        <div>
+            <p>You have to guess :{{displayWords}} </p>
+        </div>
+        <div>
+            <div>
+                    <input type = "text" name = 'guess' ng-model="input.letters">
+                    <button ng-click="letterChosen()">Submit</button>
+            </div>
+        </div>
+    </div>
+     
     
 </body>
 </html>
