@@ -11,9 +11,20 @@ app.controller('GameController', ['$scope', function ($scope) {
      
     var selectRandomWord = function () {
         var index = Math.round(Math.random()* words.length);
-        console.log(index);
-
+        return words[index];
     }
+   
+    var newGame = function () {
+     $scope.incorrectLettersChoosen = []; 
+     $scope.correctLettersChoosen = [];
+     $scope.guesses = 6;
+     $scope.displayWords = '';
+     var selectedWord = selectRandomWord();  
+         
+    }
+      
+
+   
 
 
 }]);
